@@ -1,0 +1,8 @@
+.card-style:hover{
+  transform: scale(1.03);
+  transition: transform 0.4s;
+  background-color: #00ffe626;
+}
+.card-style{
+  background-color: aliceblue;
+}
