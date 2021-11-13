@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router";
 import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 import useAuth from "../../../Hooks/UseAuth";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import AddProduct from "../Admin/AddProduct/AddProduct";
@@ -14,7 +15,7 @@ import "./Dashboard.css";
 import WelCome from "./Welcome/WelCome";
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
-  const { admin } = useAuth();
+  const { admin, logout } = useAuth();
   return (
     <div className="container">
       <div className="row">
@@ -24,33 +25,40 @@ const Dashboard = () => {
 
             {admin ? (
               <div>
-                <Link to={`${url}/manageAllOrder`}>
+                <Link className="text-decoration" to={`${url}/manageAllOrder`}>
                   <li className="dashboard-style mt-3">Manage All Order</li>
                 </Link>
 
-                <Link to={`${url}/addProduct`}>
+                <Link className="text-decoration" to={`${url}/addProduct`}>
                   <li className="dashboard-style mt-3">Add Product</li>
                 </Link>
-                <Link to={`${url}/makeAdmin`}>
+                <Link className="text-decoration" to={`${url}/makeAdmin`}>
                   <li className="dashboard-style mt-3">Make add Admin</li>
                 </Link>
-                <Link to={`${url}/manageProduct`}>
+                <Link className="text-decoration" to={`${url}/manageProduct`}>
                   <li className="dashboard-style mt-3">Manage Product</li>
                 </Link>
+                <li onClick={logout} className="dashboard-style mt-3">
+                  Log Out
+                </li>
               </div>
             ) : (
               <div>
-                <Link to={`${url}/myOrder`}>
+                <Link className="text-decoration" to={`${url}/myOrder`}>
                   <li className="dashboard-style mt-3">My Order</li>
                 </Link>
 
-                <Link to={`${url}/pay`}>
+                <Link className="text-decoration" to={`${url}/pay`}>
                   <li className="dashboard-style mt-3">Pay</li>
                 </Link>
 
-                <Link to={`${url}/review`}>
+                <Link className="text-decoration" to={`${url}/review`}>
                   <li className="dashboard-style mt-3">Review</li>
                 </Link>
+
+                <li onClick={logout} className="dashboard-style mt-3">
+                  Log Out
+                </li>
               </div>
             )}
           </div>

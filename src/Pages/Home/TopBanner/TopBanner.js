@@ -10,9 +10,10 @@ const TopBanner = () => {
         <div className="text-style">
           <h2>1k+ Baby Care Product</h2>
 
-          <NavLink to="/explore">
+          <NavLink style={{textDecoration: "none"}} to="/explore">
             <Button
-              style={{ backgroundColor: "aqua", marginTop: "5px" }}
+              style={{ backgroundColor: "aqua", marginTop: "5px",
+              textDecoration: "none"}}
               variant="primary"
             >
               Explore

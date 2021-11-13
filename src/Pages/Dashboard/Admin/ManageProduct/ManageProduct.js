@@ -8,10 +8,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 
-/* 
-const products = 
-   */
-
 const ManageProduct = () => {
   const [product, setProduct] = useState();
 

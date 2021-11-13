@@ -16,3 +16,7 @@
   .dashboard-style:hover {
     color: red;
   }
+
+  .text-decoration {
+    text-decoration: none;
+  }
