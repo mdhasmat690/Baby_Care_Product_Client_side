@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Error = () => {
-    return (
-        <div>
-            <h2>This is error</h2>
-        </div>
-    );
+  return (
+    <div className="container">
+      <img className="w-75" src="https://i.ibb.co/zNBYByY/3747371.jpg" alt="" />
+    </div>
+  );
 };
 
 export default Error;
