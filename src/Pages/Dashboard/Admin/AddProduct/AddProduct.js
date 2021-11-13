@@ -22,9 +22,9 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="my-4" style={{backgroundColor: '#d4e3e8'}}>
+    <div className="my-4" style={{ backgroundColor: "#d4e3e8" }}>
       <div className="mt-5">
-      <h2>Added New Product</h2>
+        <h2>Added New Product</h2>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
@@ -56,8 +56,9 @@ const AddProduct = () => {
           required
         />
         <br />
-      {/*   <input className="p-2 mt-4 w-50" className="btn-color"  /> */}
-        <Button className="mb-4" variant="primary" type="submit">Primary</Button>
+        <Button className="mb-4" variant="primary" type="submit">
+          Submit
+        </Button>
       </form>
     </div>
   );

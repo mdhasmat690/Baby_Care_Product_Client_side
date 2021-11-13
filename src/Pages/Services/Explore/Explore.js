@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { CircularProgress, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
@@ -19,7 +19,7 @@ const Explore = () => {
         <h2>Our All products</h2>
       </div>
 
-      <Row xs={1} md={3} className="g-4">
+      {product?.length ? <Row xs={1} md={3} className="g-4">
         {product?.map((product) => (
           <Col key={product._id} sx={{ mb: 2 }}>
             <Card className="card-style">
@@ -37,7 +37,9 @@ const Explore = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> :
+      <CircularProgress />
+      }
     </div>
   );
 };
